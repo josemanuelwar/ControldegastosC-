@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Enviar parametros del rquest hhtp get -url</title>
+</head>
+<body>
+	<h1>Enviar parametros del rquest hhtp get -url</h1>
+	<ul>
+		<li><a th:href="@{/params/string(texto='hola jose manuel')}">/params/string?texto=hola
+				jose</a></li>
+		<li><a th:href="@{/params/string(texto='hola mariana')}">/params/string?texto=hola
+				marina</a></li>
+		<li>
+			<a th:href="@{/params/mix-params(saludo='como estas manuel', numero=8)}">
+				pase de dos parametros
+			</a>
+			
+		</li>	
+		<li>
+			<a th:href="@{/params/mix-params-request(saludo='como estas manuel', numero=8)}">
+				pasar dos parametros servelt
+			</a>
+		</li>	
+	</ul>
+</body>
+</html>
